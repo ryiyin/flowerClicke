@@ -1,0 +1,13 @@
+.leaf{
+    width: 500px;
+    height: 500px;
+    transition: transform 0.1s;
+}
+
+.leaf:hover{
+    cursor:pointer;
+}
+
+.leaf.zoomed {
+    transform: scale(1.1); /* Tamaño aumentado en 20% */
+  }
