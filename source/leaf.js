@@ -1,13 +1,22 @@
 const image = document.querySelector(".leaf");
+const conterValue = document.getElementById("counter");
 let counter = 0;
 
-export function conterValue() {
+/* export function conterValue() {
   return document.getElementById("counter");
 }
+ */
 export function incrementCounter(n) {
-  counter = counter + n;
+  setInterval(() => {
+    counter = counter + n;
+    conterValue.textContent = getCounterValue();
+  }, 1000);
 }
 
+function increment1Counter(n) {
+  counter = counter + n;
+  conterValue.textContent = getCounterValue();
+}
 export function getCounterValue() {
   return counter;
 }
@@ -15,8 +24,8 @@ export function getCounterValue() {
 export function leafCounter() {
   image.addEventListener("click", () => {
     /* setInterval(() => { */
-      incrementCounter(1);
-      conterValue().textContent = getCounterValue();
+    increment1Counter(1);
+    conterValue.textContent = getCounterValue();
     /* }, 1000); */
   });
 }
