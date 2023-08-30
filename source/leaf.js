@@ -1,5 +1,4 @@
 const image = document.querySelector(".leaf");
-/* const conterValue = document.getElementById("counter"); */
 let counter = 0;
 export function getCounterValue() {
   return parseInt(counter);
@@ -12,9 +11,7 @@ export function incrementCounter(n,coun) {
   counter=coun
   setInterval(() => {
     counter = counter + n;
-/*     console.log(counter,n) */
     conterValue().textContent = parseInt(counter);
-    
   }, 1000);
 }
 

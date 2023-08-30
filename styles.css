@@ -1,16 +1,67 @@
-*{
-    background-color: rgb(212, 212, 212);
-}
-.leaf{
-    width: 500px;
-    height: 500px;
-    transition: transform 0.1s;
+* {
+  font-family: "Merriweather", Georgia, serif;
 }
 
-.leaf:hover{
-    cursor:pointer;
+body,
+html {
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+  background-color: rgb(174, 164, 192);
+}
+
+.columns {
+  display: flex;
+  padding: 10px;
+  height: 97.5%; 
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  flex: 40%;
+  border: 1px solid #3b3a3a;
+}
+
+.column2 {
+  display: flex;
+  flex-direction: column; 
+  flex: 40%;
+  border-top: 1px solid #3b3a3a;
+  border-bottom: 1px solid #3b3a3a;
+}
+
+.column2 div{
+    border-bottom: 1px solid #3b3a3a;
+    padding-bottom: 90px;
+}
+
+.column3 {
+  display: flex;
+  flex-direction: column; 
+  border: 1px solid #3b3a3a;
+  flex:  20%;
+}
+
+.column3 div{
+    border-bottom: 1px solid #3b3a3a;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.leaf {
+  width: 80%;
+  height: auto;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.leaf:hover {
+  cursor: pointer;
 }
 
 .leaf.zoomed {
-    transform: scale(1.1); /* Tamaño aumentado en 20% */
-  }
+  transform: scale(1.1); 
+}

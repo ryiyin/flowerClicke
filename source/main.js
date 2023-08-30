@@ -4,10 +4,15 @@ import { upgrade1Logic } from "./upgrades.js";
 import { upgrade2Logic } from "./upgrades.js";
 import { upgrade3Logic } from "./upgrades.js";
 
+
+const costBee = document.querySelector(".cost-bee");
 /* import { incrementCounter, getCounterValue } from './upgrades.js'; */
 
 leafCounter();
 leafZoom();
-upgrade1Logic(7);
+upgrade1Logic();
 upgrade2Logic();
 upgrade3Logic();
+
+
+
