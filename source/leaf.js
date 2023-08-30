@@ -1,32 +1,31 @@
 const image = document.querySelector(".leaf");
-const conterValue = document.getElementById("counter");
+/* const conterValue = document.getElementById("counter"); */
 let counter = 0;
-
-/* export function conterValue() {
+export function getCounterValue() {
+  return parseInt(counter);
+}
+export function conterValue() {
   return document.getElementById("counter");
 }
- */
-export function incrementCounter(n) {
+
+export function incrementCounter(n,coun) {
+  counter=coun
   setInterval(() => {
     counter = counter + n;
-    conterValue.textContent = getCounterValue();
+/*     console.log(counter,n) */
+    conterValue().textContent = parseInt(counter);
+    
   }, 1000);
 }
 
 function increment1Counter(n) {
   counter = counter + n;
-  conterValue.textContent = getCounterValue();
-}
-export function getCounterValue() {
-  return counter;
+  conterValue().textContent = getCounterValue();
 }
 
 export function leafCounter() {
   image.addEventListener("click", () => {
-    /* setInterval(() => { */
     increment1Counter(1);
-    conterValue.textContent = getCounterValue();
-    /* }, 1000); */
   });
 }
 
