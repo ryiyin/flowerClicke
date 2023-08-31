@@ -1,5 +1,6 @@
 * {
   font-family: "Merriweather", Georgia, serif;
+  color: aliceblue;
 }
 
 body,
@@ -7,12 +8,11 @@ html {
   height: 100%; 
   margin: 0; 
   padding: 0;
-  background-color: rgb(174, 164, 192);
+  background-color: rgb(139, 93, 224);
 }
 
 .columns {
   display: flex;
-  padding: 10px;
   height: 97.5%; 
 }
 
@@ -25,17 +25,33 @@ html {
   border: 1px solid #3b3a3a;
 }
 
+.leaf {
+  width: 65%;
+  height: auto;
+  justify-content: center;
+  transition: transform 0.1s;
+}
+
+.leaf:hover {
+  cursor: pointer;
+}
+
+.leaf.zoomed {
+  transform: scale(1.1); 
+}
+
 .column2 {
   display: flex;
   flex-direction: column; 
   flex: 40%;
   border-top: 1px solid #3b3a3a;
   border-bottom: 1px solid #3b3a3a;
+  
 }
 
 .column2 div{
     border-bottom: 1px solid #3b3a3a;
-    padding-bottom: 90px;
+    height: 110px;
 }
 
 .column3 {
@@ -51,17 +67,4 @@ html {
     cursor: pointer;
 }
 
-.leaf {
-  width: 80%;
-  height: auto;
-  justify-content: center;
-  transition: transform 0.1s;
-}
 
-.leaf:hover {
-  cursor: pointer;
-}
-
-.leaf.zoomed {
-  transform: scale(1.1); 
-}
