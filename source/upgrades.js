@@ -1,11 +1,12 @@
 import { incrementCounter, getCounterValue, conterValue } from "./leaf.js";
+import{ opacityBee,opacityGrandma,opacityBusinessman } from "./visualUpgrades.js"
 
-const powerUp1 = document.querySelector(".powerUp1");
-const powerUp2 = document.querySelector(".powerUp2");
-const powerUp3 = document.querySelector(".powerUp3");
-const costBee = document.querySelector(".cost-bee");
-const costGrandma = document.querySelector(".cost-grandma");
-const costBusinessman = document.querySelector(".cost-businessman");
+export const powerUp1 = document.querySelector(".powerUp1");
+export const powerUp2 = document.querySelector(".powerUp2");
+export const powerUp3 = document.querySelector(".powerUp3");
+export const costBee = document.querySelector(".cost-bee"); 
+export const costGrandma = document.querySelector(".cost-grandma");
+export const costBusinessman = document.querySelector(".cost-businessman");
 const imgBee = document.querySelector(".img-bee");
 const imgGrandma = document.querySelector(".img-grandma");
 const imgBusinessman = document.querySelector(".img-businessman");
@@ -85,3 +86,12 @@ function introduceImage(n,character) {
     n++;
   }
 }
+
+opacityBee();
+conterValue().addEventListener('DOMSubtreeModified', opacityBee);
+
+opacityGrandma();
+conterValue().addEventListener('DOMSubtreeModified', opacityGrandma);
+
+opacityBusinessman();
+conterValue().addEventListener('DOMSubtreeModified', opacityBusinessman);
