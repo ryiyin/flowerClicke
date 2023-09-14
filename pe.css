@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#contenedor {
+    position: relative;
+}
+
+#imagen-clickable {
+    cursor: pointer;
+}
+
+.imagen-oculta {
+    display: none;
+    position: absolute;
+    /* Establece estilos para la imagen que aparecerá, como tamaño, fondo, etc. */
+}
+

@@ -67,11 +67,26 @@ html {
     cursor: pointer;
 }
 
+.column3 img{
+  width: 50px;
+  height: 50px;
+}
+
+.info-oculto{
+  display: none;
+  position: absolute;
+  right: 24rem;
+  z-index: 2;
+}
+
+.powerUp1:hover + .info-oculto{
+  display:block;
+}
 
 /* .powerUp2 {
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-  transition: opacity 0.3s; 
+  user-select: none;
+}
+
+.leaf{
+  user-select: none;
 } */

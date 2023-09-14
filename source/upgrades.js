@@ -10,23 +10,52 @@ export const costBusinessman = document.querySelector(".cost-businessman");
 const imgBee = document.querySelector(".img-bee");
 const imgGrandma = document.querySelector(".img-grandma");
 const imgBusinessman = document.querySelector(".img-businessman");
+const seedsXseg = document.getElementById("seedsXseg")
+
+let newCookiePerSec=0
 
 export function upgrade1Logic() {
   let numImg=0
-
+  /* actualizarContador()  */
   powerUp1.addEventListener("click", () => {
     if (getCounterValue() >= costBee.textContent) {
       let cost = costBee.textContent;
+
+/*       actualizarContador(0.2) */
+      cookiePerSec(0.2)
       incrementCounter(0.2, conterValue().textContent - cost);
+      
       conterValue().textContent = conterValue().textContent - cost;
       costPercent(cost, costBee, 0.13);
       introduceImage(numImg,"bee")
       numImg++
     }
-
-    
   });
 }
+
+function cookiePerSec(n) {
+  newCookiePerSec =(newCookiePerSec + n);
+  seedsXseg.innerHTML=newCookiePerSec.toFixed(1)
+}
+
+/* function actualizarContador(n=0) {
+  let cookiePerSec = parseFloat(localStorage.getItem('contador')) || 0;
+  incrementCounter(cookiePerSec,1)
+
+  seedsXseg.innerHTML=cookiePerSec
+  console.log(conterValue().textContent)
+  cookiePerSec = (cookiePerSec + n).toFixed(1)
+
+  localStorage.setItem('contador', cookiePerSec); */
+
+/*   seedsAmount()
+  var datoRecuperado = localStorage.getItem("seedsAmount");
+  console.log(datoRecuperado) */
+/* } */
+
+
+
+
 
 export function upgrade2Logic() {
   let numImg=0
@@ -34,6 +63,7 @@ export function upgrade2Logic() {
   powerUp2.addEventListener("click", () => {
     if (getCounterValue() >= costGrandma.textContent) {
       let cost = costGrandma.textContent;
+      cookiePerSec(2)
       incrementCounter(2, conterValue().textContent - cost);
       conterValue().textContent = conterValue().textContent - cost;
       costPercent(cost, costGrandma, 0.16);
@@ -49,6 +79,7 @@ export function upgrade3Logic() {
   powerUp3.addEventListener("click", () => {
     if (getCounterValue() >= costBusinessman.textContent) {
       let cost = costBusinessman.textContent;
+      cookiePerSec(16)
       incrementCounter(16, conterValue().textContent - cost);
       conterValue().textContent = conterValue().textContent - cost;
       costPercent(cost, costBusinessman, 0.22);
@@ -86,6 +117,7 @@ function introduceImage(n,character) {
     n++;
   }
 }
+
 
 opacityBee();
 conterValue().addEventListener('DOMSubtreeModified', opacityBee);
