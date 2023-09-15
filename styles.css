@@ -59,6 +59,7 @@ html {
   flex-direction: column; 
   border: 1px solid #3b3a3a;
   flex:  20%;
+  user-select: none;
 }
 
 .column3 div{
@@ -83,10 +84,11 @@ html {
   display:block;
 }
 
-/* .powerUp2 {
-  user-select: none;
+.column3 {
+  
 }
 
 .leaf{
   user-select: none;
-} */
+  -webkit-user-drag: none;
+}

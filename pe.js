@@ -3,7 +3,7 @@ document.addEventListener('click', (event) => {
     const imagenAparecida = document.createElement('img');
 
     // Establece la fuente de la imagen que aparecerá
-    imagenAparecida.src = '/media/bee.png';
+    imagenAparecida.src = '/media/seed.png';
 
     // Establece la posición de la imagen aparecida en el lugar donde hiciste clic
     imagenAparecida.style.position = 'absolute';
@@ -18,7 +18,7 @@ document.addEventListener('click', (event) => {
     document.body.appendChild(imagenAparecida);
     setTimeout(() => {
         document.body.removeChild(imagenAparecida);
-    }, 1000);
+    }, 1000); 
 });
 
 

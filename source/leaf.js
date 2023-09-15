@@ -47,13 +47,35 @@ export function leafZoom() {
     setTimeout(() => {
       image.classList.remove("zoomed");
     }, 40);
-    image.style.transform = 'scale(1.0) translateY(-50px)';
-    setTimeout(() => {
-        imagenClickable.style.display = "none";
-    }, 100); 
+    
+  seed()
   });
 }
 
+
+function seed() {
+  const invokeSeed = document.createElement('img');
+  invokeSeed.src = '/media/seed.png';
+
+  invokeSeed.style.position = 'absolute';
+  invokeSeed.style.left = `${event.clientX}px`;
+  invokeSeed.style.top = `${event.clientY}px`;
+
+  invokeSeed.style.width = '100px';
+  invokeSeed.style.height = '100px';
+  invokeSeed.style.pointerEvents = "none";
+
+  document.body.appendChild(invokeSeed);
+  
+  setTimeout(() => {
+      invokeSeed.style.transition = 'transform 0.4s ease-in-out';
+      invokeSeed.style.transform = 'scale(1.0) translateY(100px)';
+  }, 0); 
+
+  setTimeout(()=>{
+    document.body.removeChild(invokeSeed);
+  },600)
+}
 
 
 
